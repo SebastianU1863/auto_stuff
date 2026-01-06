@@ -23,7 +23,7 @@ def start_clicking(targets):
         #for future  me, this can go faster if you use other imports like mss to find targets rather than pyautogui
         #current speed is about 300-500 avg ms right now
         #maybe take the screenshot
-        target_location = pyautogui.locateOnScreen(path, grayscale=True, region=aiming_region)
+        target_location = pyautogui.locateOnScreen(path, grayscale=True, region=aiming_region, confidence=0.8)
         pyautogui.leftClick(target_location)
     print("Done")
 
